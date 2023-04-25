@@ -11,8 +11,7 @@
   ],
   "publisher": "hudmarc",
   "license": "MIT",
-  "activationEvents": [
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
