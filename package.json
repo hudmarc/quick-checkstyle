@@ -37,6 +37,12 @@
           "title": "QuickCheckstyle Class Path",
           "default": "",
           "description": "Path to checkstyle jar file."
+        },
+        "quick-checkstyle.additional-checkstyle-arguments": {
+          "type": "string",
+          "title": "Additional Checkstyle arguments",
+          "default": "",
+          "description": "Additional arguments for the checkstyle jar."
         }
       }
     }
