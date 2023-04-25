@@ -13,3 +13,4 @@ Thumbs.db
 tsconfig.lsif.json
 *.lsif
 *.db
+*.vsix
