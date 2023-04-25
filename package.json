@@ -1,0 +1,66 @@
+{
+  "name": "quick-checkstyle",
+  "displayName": "QuickCheckstyle for Java",
+  "description": "An extension to quickly check your workspace with a .xml Checkstyle file.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Linters"
+  ],
+  "publisher": "hudmarc",
+  "license": "MIT",
+  "activationEvents": [
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "quick-checkstyle.check-all",
+        "title": "QuickCheckstyle: Check With This XML"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "resourceExtname == .xml",
+          "command": "quick-checkstyle.check-all",
+          "group": "quick-checkstyle"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "QuickCheckstyle",
+      "properties": {
+        "quick-checkstyle.checkstyle-class-path": {
+          "type": "string",
+          "title": "QuickCheckstyle Class Path",
+          "default": "",
+          "description": "Path to checkstyle jar file."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.77.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "eslint": "^8.36.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5",
+    "@vscode/test-electron": "^2.3.0"
+  }
+}
