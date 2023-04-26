@@ -10,6 +10,10 @@ export function activate(context: vscode.ExtensionContext) {
 
 			const config = vscode.workspace.getConfiguration('quick-checkstyle');
 			const classPath = config.get("checkstyle-class-path");
+			var additionalArgs = config.get("additional-checkstyle-arguments");
+			if (additionalArgs !== undefined && additionalArgs !== "") {
+				additionalArgs = " " + additionalArgs;
+			} 
 
 			if (classPath === undefined || classPath === "") {
 				vscode.window.showErrorMessage('No Checkstyle installation found! Set `quick-checkstyle.checkstyle-class-path` to the path to your checkstyle `.jar` file.');
@@ -28,7 +32,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 			terminal?.sendText("clear");
 
-			terminal?.sendText(`java -jar "${classPath}" -c "${uri.fsPath}" "${vscode.workspace.workspaceFolders[0].uri.fsPath}"`);
+			terminal?.sendText(`java -jar "${classPath}" -c "${uri.fsPath}" "${vscode.workspace.workspaceFolders[0].uri.fsPath}"${additionalArgs}`);
 		}
 
 	});
