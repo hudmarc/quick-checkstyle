@@ -3,6 +3,7 @@
   "displayName": "QuickCheckstyle for Java",
   "description": "An extension to quickly check your workspace with a .xml Checkstyle file.",
   "version": "0.0.2",
+  "repository": "https://github.com/hudmarc/quick-checkstyle",
   "engines": {
     "vscode": "^1.77.0"
   },
