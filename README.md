@@ -34,6 +34,7 @@ This extension contributes the following settings:
 ### 0.0.2
 
 Merged https://github.com/hudmarc/quick-checkstyle/pull/1
+
 Adds Setting `quick-checkstyle.additional-checkstyle-arguments` to include additional arguments in the checkstyle command.
 
 ### 0.0.1
