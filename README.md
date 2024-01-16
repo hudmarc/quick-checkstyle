@@ -2,23 +2,18 @@
 
 This extension serves as a wrapper for the Checkstyle jar, and offers a quick way to check the contents of a Workspace with a given .xml Checkstyle file.
 
----
-
 ## Features
 
 
 Simply right click a valid Checkstlye .xml file and click `QuickCheckstyle: Check With This XML` in order to check all java files in your workspace with a given Checkstyle XML document.
 
-
-
 > Make sure to point the extension to your checkstyle installation beforehand!
----
+
 ## Requirements
 
 
 This extension requires a working installation of Checkstyle. The latest JAR can be found here: https://github.com/checkstyle/checkstyle/releases/latest
 
----
 
 ## Extension Settings
 
@@ -27,7 +22,6 @@ This extension contributes the following settings:
 
 * `quick-checkstyle.checkstyle-class-path`: The path to your Checkstyle JAR file.
 
----
 
 ## Release Notes
 
